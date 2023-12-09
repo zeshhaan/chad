@@ -17,6 +17,7 @@ defmodule ChadWeb.Router do
   scope "/", ChadWeb do
     pipe_through :browser
 
+    live "/:room_id", ChadLive
     get "/", PageController, :home
   end
 
